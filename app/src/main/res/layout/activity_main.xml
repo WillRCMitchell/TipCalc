@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.on.conestogac.www.tipcalc.MainActivity"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/percentDownButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:text="@string/decrease"
+        android:layout_alignBaseline="@+id/percentTextView"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/percentTextView"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/billAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_amount_label"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/percentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billAmountLabel"
+        android:layout_below="@+id/billAmountLabel"
+        android:padding="10dp"
+        android:text="@string/tip_percent_label"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_amount_label"
+        android:layout_alignLeft="@+id/percentLabel"
+        android:layout_below="@+id/percentLabel"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_amount_label"
+        android:layout_alignLeft="@+id/tipLabel"
+        android:layout_below="@+id/tipLabel"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/percentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_percent"
+        android:layout_alignBaseline="@+id/percentLabel"
+        android:layout_alignLeft="@+id/billAmountEditText"
+        android:padding="5dp"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tipLabel"
+        android:layout_alignLeft="@+id/billAmountEditText"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:text="@string/tip_amount"
+        />
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/total_amount"
+        android:layout_alignBaseline="@+id/totalLabel"
+        android:layout_alignLeft="@+id/tipTextView"
+        android:padding="5dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/billAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billAmountLabel"
+        android:ems="8"
+        android:layout_toRightOf="@+id/billAmountLabel"
+        android:layout_marginLeft="5dp"
+        android:inputType="numberDecimal"
+        android:text="@string/bill_amount"
+        android:textSize="20sp"><requestFocus/></EditText>
+
+    <Button
+        android:id="@+id/percentUpButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBaseline="@+id/percentDownButton"
+        android:layout_toRightOf="@+id/percentDownButton"
+        android:text="@string/increase"/>
+</RelativeLayout>
